@@ -1,0 +1,22 @@
+{
+  "name": "visual-sentinel",
+  "version": "0.1.0",
+  "description": "Visual Sentinel website monitoring inside Claude. Wraps @visualsentinel/mcp-server with three task-focused skills (monitor health check, incident triage, monitor onboarding) and matching slash commands.",
+  "author": {
+    "name": "Visual Sentinel",
+    "email": "support@visualsentinel.com",
+    "url": "https://visualsentinel.com"
+  },
+  "homepage": "https://github.com/VisualSentinel/claude-plugins/tree/main/visual-sentinel",
+  "repository": "https://github.com/VisualSentinel/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "monitoring",
+    "uptime",
+    "ssl",
+    "dns",
+    "visual-regression",
+    "incidents",
+    "alerts"
+  ]
+}

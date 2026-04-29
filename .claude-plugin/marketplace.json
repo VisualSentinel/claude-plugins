@@ -1,0 +1,32 @@
+{
+  "name": "visualsentinel",
+  "owner": {
+    "name": "Visual Sentinel",
+    "email": "support@visualsentinel.com"
+  },
+  "metadata": {
+    "description": "Claude plugins and skills for Visual Sentinel, the six-layer website monitoring platform (uptime, performance, SSL, DNS, visual regression, content change).",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "visual-sentinel",
+      "description": "Manage Visual Sentinel monitors, incidents, and alerts directly from Claude. Bundles the @visualsentinel/mcp-server tools, three skills (monitor-status check, incident triage, monitor onboarding), and matching slash commands.",
+      "source": "./visual-sentinel",
+      "version": "0.1.0",
+      "homepage": "https://visualsentinel.com",
+      "license": "MIT",
+      "category": "monitoring",
+      "keywords": [
+        "monitoring",
+        "uptime",
+        "ssl",
+        "dns",
+        "visual-regression",
+        "incidents",
+        "alerts",
+        "visualsentinel"
+      ]
+    }
+  ]
+}
