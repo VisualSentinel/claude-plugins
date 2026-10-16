@@ -23,7 +23,7 @@ Generate a key at https://visualsentinel.com/settings/api-keys.
 
 ### `visual-sentinel`
 
-Manage monitors, triage incidents, and create new monitors directly from Claude. Bundles the `@visualsentinel/mcp-server` MCP server (16 tools), three skills, and three slash commands.
+Manage monitors, triage incidents, and create new monitors directly from Claude. Bundles the `@visualsentinel/mcp-server` MCP server (17 tools), three skills, and three slash commands.
 
 * See [`visual-sentinel/README.md`](./visual-sentinel/README.md) for the full feature list.
 

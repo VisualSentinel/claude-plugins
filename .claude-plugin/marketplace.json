@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Claude plugins and skills for Visual Sentinel, the six-layer website monitoring platform (uptime, performance, SSL, DNS, visual regression, content change).",
-    "version": "0.1.0"
+    "version": "0.2.1"
   },
   "plugins": [
     {
       "name": "visual-sentinel",
-      "description": "Manage Visual Sentinel monitors, incidents, and alerts directly from Claude. Bundles the @visualsentinel/mcp-server tools, three skills (monitor-status check, incident triage, monitor onboarding), and matching slash commands.",
+      "description": "Manage Visual Sentinel monitors, incidents, and alerts directly from Claude. Visual Sentinel catches pages that look broken even when the site is up. Bundles the @visualsentinel/mcp-server tools, three skills, and matching slash commands.",
       "source": "./visual-sentinel",
-      "version": "0.1.0",
+      "version": "0.2.1",
       "homepage": "https://visualsentinel.com",
       "license": "MIT",
       "category": "monitoring",

@@ -1,7 +1,7 @@
 {
   "name": "visual-sentinel",
-  "version": "0.1.0",
-  "description": "Visual Sentinel website monitoring inside Claude. Wraps @visualsentinel/mcp-server with three task-focused skills (monitor health check, incident triage, monitor onboarding) and matching slash commands.",
+  "version": "0.2.1",
+  "description": "Website monitoring inside Claude. Visual Sentinel catches pages that look broken even when the site is up. Wraps @visualsentinel/mcp-server with three task-focused skills (monitor health check, incident triage, monitor onboarding) and matching slash commands. Five tools work with no account; the account tools need an API key (Business and Agency plans).",
   "author": {
     "name": "Visual Sentinel",
     "email": "support@visualsentinel.com",
@@ -18,5 +18,19 @@
     "visual-regression",
     "incidents",
     "alerts"
-  ]
+  ],
+  "displayName": "Visual Sentinel",
+  "icon": "./logo.png",
+  "documentationUrl": "https://visualsentinel.com/mcp",
+  "supportUrl": "https://visualsentinel.com/contact",
+  "privacyPolicyUrl": "https://visualsentinel.com/privacy",
+  "termsOfServiceUrl": "https://visualsentinel.com/terms",
+  "userConfig": {
+    "vs_api_key": {
+      "type": "string",
+      "title": "Visual Sentinel API key (optional)",
+      "description": "Only needed for the account tools (monitors, incidents, alerts, status pages, servers). API keys are available on the Business and Agency plans: https://visualsentinel.com/settings/api-keys. Leave empty to use the five public tools.",
+      "sensitive": true
+    }
+  }
 }
