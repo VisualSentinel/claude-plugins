@@ -4,7 +4,7 @@ Manage [Visual Sentinel](https://visualsentinel.com) monitors, incidents, and al
 
 This plugin bundles:
 
-* The `@visualsentinel/mcp-server` MCP server (16 tools across the public Visual Sentinel API)
+* The `@visualsentinel/mcp-server` MCP server (17 tools across the public Visual Sentinel API, pinned to 0.2.1)
 * Three task-focused skills:
   * `vs-monitor-status`: "what monitors are up/down" and uptime queries
   * `vs-incident-triage`: triage open incidents, summarise outages, acknowledge alerts
@@ -47,7 +47,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 }
 ```
 
-Skills and slash commands are Claude Code features and do not apply to Claude Desktop. Claude Desktop users get the same 16 MCP tools, just without the skill / command sugar.
+Skills and slash commands are Claude Code features and do not apply to Claude Desktop. Claude Desktop users get the same 17 MCP tools, just without the skill / command sugar.
 
 ## What it does
 
@@ -62,7 +62,7 @@ After install, you can ask Claude things like:
 
 | Variable | Purpose | Where |
 |---|---|---|
-| `VS_API_KEY` | Required for monitors / incidents / alerts / status pages / servers tools. Generate at https://visualsentinel.com/settings/api-keys. | Set in your shell or in the MCP config file's `env` block. |
+| `VS_API_KEY` | Required for monitors / incidents / alerts / status pages / servers tools (Business and Agency plans). Generate at https://visualsentinel.com/settings/api-keys. | The plugin's `vs_api_key` setting, asked when you enable the plugin. In Claude Desktop, the MCP config file's `env` block. |
 | `VS_API_BASE` | Override only for testing against a local Visual Sentinel dev instance. Defaults to `https://visualsentinel.com`. | Same. |
 
 Public tools (`vs_health`, `vs_dns_check`, `vs_ssl_check`, `vs_speed_test`, `vs_website_check`) work without an API key.
