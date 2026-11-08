@@ -2,6 +2,12 @@
 
 All notable changes to the Visual Sentinel Claude plugins marketplace.
 
+## [0.2.2] - 2026-11-09
+
+### Changed
+
+* `visual-sentinel` plugin pins `@visualsentinel/mcp-server@0.2.2` (its npm homepage now points at visualsentinel.com/mcp; no tool changes).
+
 ## [0.1.0] - 2026-04-29
 
 Initial public release.

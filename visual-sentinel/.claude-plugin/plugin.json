@@ -1,6 +1,6 @@
 {
   "name": "visual-sentinel",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Website monitoring inside Claude. Visual Sentinel catches pages that look broken even when the site is up. Wraps @visualsentinel/mcp-server with three task-focused skills (monitor health check, incident triage, monitor onboarding) and matching slash commands. Five tools work with no account; the account tools need an API key (Business and Agency plans).",
   "author": {
     "name": "Visual Sentinel",
