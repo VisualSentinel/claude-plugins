@@ -62,7 +62,7 @@ After install, you can ask Claude things like:
 
 | Variable | Purpose | Where |
 |---|---|---|
-| `VS_API_KEY` | Required for monitors / incidents / alerts / status pages / servers tools (Business and Agency plans). Generate at https://visualsentinel.com/settings/api-keys. | The plugin's `vs_api_key` setting, asked when you enable the plugin. In Claude Desktop, the MCP config file's `env` block. |
+| `VS_API_KEY` | Required for monitors / incidents / alerts / status pages / servers tools. API keys come with every paid plan (Solo, Starter, Business and Agency), including the 10-day free trial. Generate at https://visualsentinel.com/settings/api-keys. | The plugin's `vs_api_key` setting, asked when you enable the plugin. In Claude Desktop, the MCP config file's `env` block. |
 | `VS_API_BASE` | Override only for testing against a local Visual Sentinel dev instance. Defaults to `https://visualsentinel.com`. | Same. |
 
 Public tools (`vs_health`, `vs_dns_check`, `vs_ssl_check`, `vs_speed_test`, `vs_website_check`) work without an API key.

@@ -2,6 +2,12 @@
 
 All notable changes to the Visual Sentinel Claude plugins marketplace.
 
+## [0.2.3] - 2026-11-09
+
+### Fixed
+
+* `visual-sentinel` plugin description, the `vs_api_key` setting and the plugin README now say API keys (and so the account tools) come with every paid plan (Solo, Starter, Business and Agency), including the 10-day free trial. They used to say Business and Agency only.
+
 ## [0.2.2] - 2026-11-09
 
 ### Changed
