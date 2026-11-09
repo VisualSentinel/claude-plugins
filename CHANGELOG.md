@@ -2,6 +2,12 @@
 
 All notable changes to the Visual Sentinel Claude plugins marketplace.
 
+## [0.2.4] - 2026-11-10
+
+### Changed
+
+* `visual-sentinel` plugin pins `@visualsentinel/mcp-server@0.2.3`: its plans resource, tool error and prompts state the current offer (a 10-day free trial, no card with a work email) and that API keys come with every paid plan, including the trial. No tool changes.
+
 ## [0.2.3] - 2026-11-09
 
 ### Fixed
