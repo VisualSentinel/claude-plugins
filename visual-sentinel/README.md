@@ -4,7 +4,7 @@ Manage [Visual Sentinel](https://visualsentinel.com) monitors, incidents, and al
 
 This plugin bundles:
 
-* The `@visualsentinel/mcp-server` MCP server (17 tools across the public Visual Sentinel API, pinned to 0.2.2)
+* The `@visualsentinel/mcp-server` MCP server (17 tools across the public Visual Sentinel API, pinned to 0.2.3)
 * Three task-focused skills:
   * `vs-monitor-status`: "what monitors are up/down" and uptime queries
   * `vs-incident-triage`: triage open incidents, summarise outages, acknowledge alerts
