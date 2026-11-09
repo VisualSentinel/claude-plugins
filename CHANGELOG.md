@@ -2,7 +2,7 @@
 
 All notable changes to the Visual Sentinel Claude plugins marketplace.
 
-## [Unreleased]
+## [0.2.3] - 2026-11-09
 
 ### Fixed
 
