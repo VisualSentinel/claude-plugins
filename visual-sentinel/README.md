@@ -2,9 +2,9 @@
 
 Manage [Visual Sentinel](https://visualsentinel.com) monitors, incidents, and alerts from inside Claude Code, Claude Desktop, or any Claude client that supports the plugin format.
 
-This plugin bundles:
+This plugin adds:
 
-* The `@visualsentinel/mcp-server` MCP server (17 tools across the public Visual Sentinel API, pinned to 0.2.3)
+* A connection to the hosted Visual Sentinel MCP server (`https://visualsentinel.com/api/mcp`), with sign-in. Nothing is installed on your computer.
 * Three task-focused skills:
   * `vs-monitor-status`: "what monitors are up/down" and uptime queries
   * `vs-incident-triage`: triage open incidents, summarise outages, acknowledge alerts
@@ -23,31 +23,11 @@ claude plugin marketplace add github.com/VisualSentinel/claude-plugins
 claude plugin install visual-sentinel@visualsentinel
 ```
 
-Then export your Visual Sentinel API key in the shell:
+The first time Claude uses a Visual Sentinel tool, Claude Code opens a sign-in page. Approve the connection and the tools work in that workspace. Run `/mcp` to see or remove the connection.
 
-```bash
-export VS_API_KEY=vs_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
+### Claude Desktop and claude.ai
 
-Generate an API key at https://visualsentinel.com/settings/api-keys.
-
-### Claude Desktop
-
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
-
-```json
-{
-  "mcpServers": {
-    "visualsentinel": {
-      "command": "npx",
-      "args": ["-y", "@visualsentinel/mcp-server"],
-      "env": { "VS_API_KEY": "vs_live_..." }
-    }
-  }
-}
-```
-
-Skills and slash commands are Claude Code features and do not apply to Claude Desktop. Claude Desktop users get the same 17 MCP tools, just without the skill / command sugar.
+Add a custom connector with the URL `https://visualsentinel.com/api/mcp` and sign in when asked. Skills and slash commands are Claude Code features, so these clients get the same tools without them.
 
 ## What it does
 
@@ -56,16 +36,7 @@ After install, you can ask Claude things like:
 * "Which of my Visual Sentinel monitors are down right now?" -> `/vs-status` or natural language; the `vs-monitor-status` skill walks through the right tool calls.
 * "Triage incident `clm_xyz` and tell me what to do" -> `/vs-incidents`; the `vs-incident-triage` skill reads the check history and proposes next actions.
 * "Add a visual regression monitor for `https://shop.example.com/checkout` with 1-minute checks" -> `/vs-add-monitor https://shop.example.com/checkout VISUAL`; the `vs-add-monitor` skill confirms before creating.
-* "Check the SSL cert on `visualsentinel.com`" -> uses the public `vs_ssl_check` tool (no API key required).
-
-## Configuration
-
-| Variable | Purpose | Where |
-|---|---|---|
-| `VS_API_KEY` | Required for monitors / incidents / alerts / status pages / servers tools. API keys come with every paid plan (Solo, Starter, Business and Agency), including the 10-day free trial. Generate at https://visualsentinel.com/settings/api-keys. | The plugin's `vs_api_key` setting, asked when you enable the plugin. In Claude Desktop, the MCP config file's `env` block. |
-| `VS_API_BASE` | Override only for testing against a local Visual Sentinel dev instance. Defaults to `https://visualsentinel.com`. | Same. |
-
-Public tools (`vs_health`, `vs_dns_check`, `vs_ssl_check`, `vs_speed_test`, `vs_website_check`) work without an API key.
+* "Check the SSL cert on `visualsentinel.com`" -> uses the `vs_ssl_check` tool, which checks any site, monitored or not.
 
 ## License
 

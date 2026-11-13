@@ -2,6 +2,12 @@
 
 All notable changes to the Visual Sentinel Claude plugins marketplace.
 
+## [0.2.5] - 2026-11-13
+
+### Changed
+
+* The plugin now connects to the hosted Visual Sentinel MCP server with sign-in; no API key and nothing installed on your computer.
+
 ## [0.2.4] - 2026-11-10
 
 ### Changed
