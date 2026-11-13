@@ -5,7 +5,7 @@ description: Use when the user asks about the current status of one or more Visu
 
 # Visual Sentinel: monitor status
 
-Use the bundled `@visualsentinel/mcp-server` MCP tools to answer Visual Sentinel monitor-status questions. Do not invent data; always call a tool.
+Use the Visual Sentinel MCP tools to answer Visual Sentinel monitor-status questions. Do not invent data; always call a tool.
 
 ## Tool selection
 
@@ -25,7 +25,7 @@ For uptime queries, lead with the headline percentage and outage minutes for the
 
 ## Auth
 
-`vs_monitors_*` and `vs_alerts_*` tools require `VS_API_KEY`. If the MCP server returns a 401 or "API key required" error, instruct the user to set `VS_API_KEY` (https://visualsentinel.com/settings/api-keys) and retry. Public tools (`vs_website_check`, `vs_dns_check`, `vs_ssl_check`, `vs_speed_test`) work without a key for ad-hoc lookups.
+`vs_monitors_*` and `vs_alerts_*` tools work on the signed-in workspace. If Claude Code reports that Visual Sentinel needs sign-in, ask the user to approve the sign-in page (or run `/mcp`), then retry. For a quick look at a site that is not monitored, use `vs_website_check`, `vs_dns_check`, `vs_ssl_check` or `vs_speed_test`.
 
 ## Anti-patterns
 

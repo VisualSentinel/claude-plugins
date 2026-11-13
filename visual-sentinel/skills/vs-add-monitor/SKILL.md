@@ -5,7 +5,7 @@ description: Use when the user wants to add a new Visual Sentinel monitor. Trigg
 
 # Visual Sentinel: add a monitor
 
-Use the bundled `@visualsentinel/mcp-server` `vs_monitors_create` tool to add a new monitor. Confirm critical fields with the user before creating.
+Use the Visual Sentinel `vs_monitors_create` tool to add a new monitor. Confirm critical fields with the user before creating.
 
 ## Required fields
 
@@ -45,7 +45,7 @@ Use the bundled `@visualsentinel/mcp-server` `vs_monitors_create` tool to add a 
 
 ## Auth
 
-`vs_monitors_create` requires `VS_API_KEY` with write permission. If the user only has a read-only key, the call returns 403; surface the error and direct them to https://visualsentinel.com/settings/api-keys.
+`vs_monitors_create` needs a connection with write access. If the tool answers that the connection can only read, show that message and tell the user to connect Visual Sentinel again and allow write access (`/mcp` in Claude Code).
 
 ## Anti-patterns
 

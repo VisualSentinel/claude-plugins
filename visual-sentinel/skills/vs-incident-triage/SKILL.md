@@ -5,7 +5,7 @@ description: Use when the user asks about Visual Sentinel incidents, wants to tr
 
 # Visual Sentinel: incident triage
 
-Use the bundled `@visualsentinel/mcp-server` MCP tools to triage incidents and alerts. Always pull live data; never speculate.
+Use the Visual Sentinel MCP tools to triage incidents and alerts. Always pull live data; never speculate.
 
 ## Triage workflow
 
@@ -34,7 +34,7 @@ For postmortems on already-resolved incidents, lead with the duration and the re
 
 ## Auth
 
-All `vs_incidents_*` and `vs_alerts_*` tools require `VS_API_KEY`. If unauthenticated, prompt the user to set the env var (https://visualsentinel.com/settings/api-keys) before retrying.
+All `vs_incidents_*` and `vs_alerts_*` tools work on the signed-in workspace. If Claude Code reports that Visual Sentinel needs sign-in, ask the user to approve the sign-in page (or run `/mcp`), then retry.
 
 ## Anti-patterns
 

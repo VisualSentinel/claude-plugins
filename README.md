@@ -11,27 +11,20 @@ claude plugin marketplace add github.com/VisualSentinel/claude-plugins
 claude plugin install visual-sentinel@visualsentinel
 ```
 
-Then export your Visual Sentinel API key:
-
-```bash
-export VS_API_KEY=vs_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
-
-Generate a key at https://visualsentinel.com/settings/api-keys.
+The first time Claude uses a Visual Sentinel tool, Claude Code opens a sign-in page. Approve the connection and the tools work in that workspace. Run `/mcp` to see or remove the connection.
 
 ## Plugins
 
 ### `visual-sentinel`
 
-Manage monitors, triage incidents, and create new monitors directly from Claude. Bundles the `@visualsentinel/mcp-server` MCP server (17 tools), three skills, and three slash commands.
+Manage monitors, triage incidents, and create new monitors directly from Claude. Connects to the hosted Visual Sentinel MCP server with sign-in and adds three skills and three slash commands.
 
 * See [`visual-sentinel/README.md`](./visual-sentinel/README.md) for the full feature list.
 
 ## Related
 
 * **Public OpenAPI spec:** https://github.com/VisualSentinel/openapi
-* **MCP server (raw):** https://github.com/VisualSentinel/mcp-server
-* **npm:** [`@visualsentinel/mcp-server`](https://www.npmjs.com/package/@visualsentinel/mcp-server)
+* **Hosted MCP server:** https://visualsentinel.com/mcp
 * **Hosted API reference:** https://visualsentinel.com/docs
 
 ## License
